@@ -13,6 +13,9 @@
 *{
     box-sizing: border-box;
 }
+body {
+    background-color: #F8F8F8;
+}
 .header__logo {
     font-family: 'jsMathCmti10', sans-serif;
     text-decoration: none;
