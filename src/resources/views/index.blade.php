@@ -17,7 +17,7 @@
     <div class="products-content">
         <form action="/products/search" method="get" class="products-search__form">
             @csrf
-            <input type="text" name="name" placeholder="商品名で検索" value="" class="search__form--input">
+            <input type="text" name="keyword" placeholder="商品名で検索" value="{{old('keyword')}}" class="search__form--input">
             <div class="search__form--button">
                 <button class="search__form--button-submit" type="submit">検索</button>
             </div>
@@ -26,6 +26,8 @@
                 <div class="search__form--sort-select">
                     <select name="" class="sort__select">
                     <option value="">価格で並べ替え</option>
+                    <option value="">高い順に表示</option>
+                    <option value="">低い順に表示</option>
                 </select>
                 </div>
             </div>
