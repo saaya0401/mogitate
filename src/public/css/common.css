@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'jsMathCmti10';
+    src: url('/fonts/jsMath-cmti10.ttf.eot');
+    src: url('/fonts/jsMath-cmti10.ttf.woff') format('woff'),
+        url('/fonts/jsMath-cmti10.ttf.svg') format('svg'),
+        url('/fonts/jsMath-cmti10.ttf.eot?#iefix') format('embedded-opentype');
+}
+*{
+    box-sizing: border-box;
+}
+.header__logo {
+    font-family: 'jsMathCmti10', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    color: #F5C800;
+    font-weight: 500;
+}
+.header__inner {
+    border: 1px solid #f4f4f4;
+    padding: 10px 30px;
+}
+.header {
+    width: 100vw;
+}
