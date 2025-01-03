@@ -5,6 +5,11 @@
         url('/fonts/jsMath-cmti10.ttf.svg') format('svg'),
         url('/fonts/jsMath-cmti10.ttf.eot?#iefix') format('embedded-opentype');
 }
+@font-face {
+    font-family: 'hiragino-kaku-gothic-pro-w6';
+    src: url('/fonts/hiragino-kaku-gothic-pro-w6.otf');
+}
+
 *{
     box-sizing: border-box;
 }
