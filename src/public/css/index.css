@@ -2,10 +2,11 @@
     box-sizing: border-box;
     font-family: 'hiragino-kaku-gothic-pro-w6';
 }
+
 .products-overview {
-    background-color: #F8F8F8;
-    width: 100vw;
-    height: 100vh;
+    max-width: 1512px;
+    max-height: 1000px;
+    margin: 0 auto;
 }
 
 .products-heading {
@@ -25,19 +26,21 @@
 .products-heading__button {
     height: 50px;
     width: 137px;
-}
-
-.products-heading__button-add {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFA929;
-    border: none;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 0 4px 10px #0000001A;
+}
+
+.products-heading__button-register {
+    border: none;
     font-size: 16px;
     font-weight: 600;
     color: #4B4B4B;
+    text-decoration: none;
 }
 
 
@@ -115,23 +118,31 @@
     padding: 10px;
     color: #E0DFDE;
     appearance: none;
+    cursor: pointer;
 }
 
 
-.products-list__group--line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.products-list__grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
-.products-list__card {
+.products-list__form {
     width: 374px;
     height: 350px;
     margin: 0 0 10px 10px;
-    box-shadow:0 0 10px #0000001A ;
+    box-shadow: 0 0 10px #0000001A;
     border-radius: 3px;
     background-color: #fff;
+}
+
+.products-list__card {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
     cursor: pointer;
+    border: none;
+    padding: 0;
 }
 
 .products-card__img {
@@ -153,6 +164,34 @@
 }
 .products-list__pagination{
     height: 30px;
-    margin-top: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.previous, .active, .other, .next {
+    width: 31px;
+    font-size: 18px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+}
+.previous, .active, .other{
+    margin-right: 10px;
+}
+.previous, .other, .next{
     background-color: #fff;
+}
+.pagination-link, .other a{
+    text-decoration: none;
+    color: #4B4B4B;
+    font-weight: 300;
+}
+.active{
+    background-color: #F5C800;
+}
+.active span{
+    color: #fff;
+    font-weight: 300;
 }

@@ -11,7 +11,7 @@
             商品一覧
         </h1>
         <div class="products-heading__button">
-            <button class="products-heading__button-add">+ 商品を追加</button>
+            <a href="/products/register" class="products-heading__button-register">+ 商品を追加</a>
         </div>
     </div>
     <div class="products-content">
@@ -28,63 +28,43 @@
                     <option value="">価格で並べ替え</option>
                 </select>
                 </div>
-                
             </div>
         </form>
         <div class="products-list">
-            <div class="products-list__group">
-                <div class="products-list__group--line">
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/banana.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/strawberry.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/orange.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="products-list__group--line">
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/watermelon.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/peach.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                    <div class="products-list__card">
-                        <img src="{{asset('fruits-img/muscat.png')}}" alt="商品画像" class="products-card__img">
-                        <div class="products-card__content">
-                            <span class="products-card__name">キウイ</span>
-                            <span class="products-card__price">&yen;800</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="products-list__grid">
+                    @foreach($products as $product)
+                    <form class="products-list__form" action="/products/{:productId}" method="get">
+                        @csrf
+                        <button class="products-list__card" type="submit">
+                            <img src="{{asset($product['image'])}}" alt="商品画像" class="products-card__img">
+                            <div class="products-card__content">
+                                <span class="products-card__name">{{$product['name']}}</span>
+                                <span class="products-card__price">&yen;{{$product['price']}}</span>
+                            </div>
+                        </button>
+                    </form>
+                    @endforeach
             </div>
             <div class="products-list__pagination">
-
+                @if($products->onFirstPage())
+                    <div class="previous"><span >&lt;</span></div>
+                @else
+                    <div class="previous"><a class="pagination-link" href="{{$products->previousPageUrl()}}" rel="preview">&lt;</a></div>
+                @endif
+                @for($page=1; $page<= $products->lastPage(); $page++)
+                @if($products->currentPage()== $page)
+                    <div class="active"><span>{{$page}}</span></div>
+                @else
+                    <div class="other"><a href="{{$products->url($page)}}">{{$page}}</a></div>
+                @endif
+                @endfor
+                @if($products->hasMorePages())
+                    <div class="next"><a class="pagination-link" href="{{$products->nextPageUrl()}}" rel="next">&gt;</a></div>
+                @else
+                    <div class="next"><span>&gt;</span></div>
+                @endif
             </div>
         </div>
     </div>
-    
 </div>
 @endsection
