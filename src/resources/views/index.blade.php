@@ -17,7 +17,7 @@
     <div class="products-content">
         <form action="/products/search" method="get" class="products-search__form">
             @csrf
-            <input type="text" name="keyword" placeholder="商品名で検索" value="{{old('keyword')}}" class="search__form--input">
+            <input type="text" name="keyword" placeholder="商品名で検索" value="{{old('keyword', request('keyword'))}}" class="search__form--input">
             <div class="search__form--button">
                 <button class="search__form--button-submit" type="submit">検索</button>
             </div>
@@ -35,16 +35,15 @@
         <div class="products-list">
             <div class="products-list__grid">
                     @foreach($products as $product)
-                    <form class="products-list__form" action="/products/{:productId}" method="get">
-                        @csrf
-                        <button class="products-list__card" type="submit">
+                    <div class="products-list__card">
+                        <a href="{{url('/products/' . $product['id'])}}" class="products-list__link">
                             <img src="{{asset($product['image'])}}" alt="商品画像" class="products-card__img">
                             <div class="products-card__content">
                                 <span class="products-card__name">{{$product['name']}}</span>
                                 <span class="products-card__price">&yen;{{$product['price']}}</span>
                             </div>
-                        </button>
-                    </form>
+                        </a>
+                    </div>
                     @endforeach
             </div>
             <div class="products-list__pagination">

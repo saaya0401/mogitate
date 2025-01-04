@@ -1,8 +1,3 @@
-*{
-    box-sizing: border-box;
-    font-family: 'hiragino-kaku-gothic-pro-w6';
-}
-
 .products-overview {
     max-width: 1512px;
     max-height: 1000px;
@@ -127,7 +122,7 @@
     grid-template-columns: repeat(3,1fr);
 }
 
-.products-list__form {
+.products-list__card {
     width: 374px;
     height: 350px;
     margin: 0 0 10px 10px;
@@ -136,13 +131,14 @@
     background-color: #fff;
 }
 
-.products-list__card {
+.products-list__link {
     width: 100%;
     height: 100%;
     background-color: #fff;
     cursor: pointer;
     border: none;
     padding: 0;
+    text-decoration: none;
 }
 
 .products-card__img {
