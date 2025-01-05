@@ -10,9 +10,7 @@
         <h1 class="products-heading__title">
             商品一覧
         </h1>
-        <div class="products-heading__button">
-            <a href="/products/register" class="products-heading__button-register">+ 商品を追加</a>
-        </div>
+        <a href="/products/add" class="products-heading__button-register">+ 商品を追加</a>
     </div>
     <div class="products-content">
         <form action="/products/search" method="get" class="products-search__form">
@@ -37,7 +35,7 @@
                     @foreach($products as $product)
                     <div class="products-list__card">
                         <a href="{{url('/products/' . $product['id'])}}" class="products-list__link">
-                            <img src="{{asset($product['image'])}}" alt="商品画像" class="products-card__img">
+                            <img src="{{ Storage::url($product['image'])}}" alt="商品画像" class="products-card__img">
                             <div class="products-card__content">
                                 <span class="products-card__name">{{$product['name']}}</span>
                                 <span class="products-card__price">&yen;{{$product['price']}}</span>
