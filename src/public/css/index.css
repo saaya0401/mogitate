@@ -18,24 +18,18 @@
     color: #333332;
 }
 
-.products-heading__button {
-    height: 50px;
-    width: 137px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFA929;
-    border-radius: 3px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px #0000001A;
-}
-
 .products-heading__button-register {
     border: none;
     font-size: 16px;
     font-weight: 600;
     color: #4B4B4B;
     text-decoration: none;
+    padding: 17px;
+    background-color: #FFA929;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #0000001A;
+    width: 137px;
 }
 
 

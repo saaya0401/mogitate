@@ -24,4 +24,14 @@ class ProductController extends Controller
         $selectedSeasons=$product->seasons->pluck('id')->toArray();
         return view('detail', compact('product', 'selectedSeasons', 'seasons'));
     }
+    public function add(){
+        $seasons=Season::all();
+        return view('register', compact('seasons'));
+    }
+    public function register(Request $request){
+        $productData=$request->only(['name', 'price', 'image', 'description']);
+        $product=Product::create($productData);
+        $product->seasons()->attach($request->seasons);
+        return redirect('/products');
+    }
 }

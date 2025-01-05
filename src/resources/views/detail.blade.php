@@ -14,13 +14,7 @@
             @csrf
             @method('patch')
             <div class="detail-group__top">
-                <div class="detail__image-area">
-                    <img src="{{asset($product['image'])}}" alt="商品画像" class="detail__img">
-                    <div class="detail__img-text">
-                        <label class="detail__img-label"><input type="file" name="image" class="detail__img-input">ファイルを選択</label>
-                        <span class="detail__img-title">{{basename($product['image'])}}</span>
-                    </div>
-                </div>
+                @livewire('image-uploader', ['product'=>$product])
                 <div class="detail__group">
                     <div class="detail__group-item">
                         <p class="detail-item__title">商品名</p>

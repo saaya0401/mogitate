@@ -1,0 +1,175 @@
+* {
+    font-weight: 300;
+}
+
+.register {
+    width: 760px;
+    margin: 70px auto;
+}
+
+.register-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.register-form__item--title{
+    margin-bottom: 10px;
+}
+
+.register-form__item--name {
+    color: #4B4B4B;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.register-form__item--require {
+    padding: 5px;
+    color: #fff;
+    background-color: #FD0707;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+}
+
+.register-form__item {
+    margin-bottom: 25px;
+}
+
+.register-form__item--input {
+    padding: 10px;
+    border: 1px solid #E0DFDE;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333333;
+    font-size: 14px;
+    width: 100%;
+}
+
+.register-form__item--input::placeholder {
+    color: #E0DFDE;
+}
+
+.form__image-area{
+    width: 374px;
+}
+.form__image{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form__image-title{
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form__image-label{
+    background-color: #E0DFDE;
+    border: 1px solid #4B4B4B;
+    border-radius: 3px;
+    color: #4B4B4B;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.form__image-input{
+    display: none;
+}
+.form__image-name{
+    color: #888888;
+}
+
+.checkbox__label {
+    margin-right: 50px;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #4B4B4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.register-form__item--input-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.register-item__checkbox{
+    margin-right: 5px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #4B4B4B;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.register-item__checkbox:checked {
+    background: url(../icon/Vector.png) no-repeat center;
+    background-size: 80%;
+    background-color: #4B4B4B;
+}
+
+.register-form__error {
+    color: #FD0707;
+    font-size: 14px;
+}
+
+.register-form__item--textarea {
+    border: 1px solid #E0DFDE;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 10px;
+    width: 800px;
+    height: 160px;
+    color: #333333;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.register-form__item--textarea::placeholder {
+    color: #E0DFDE;
+}
+
+.register-action__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-back__button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 13px;
+    width: 200px;
+    text-align: center;
+    background-color: #E0DFDE;
+    box-shadow: 0 4px 10px #0000001A;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register-add__button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4B4B4B;
+    padding: 13px;
+    width: 200px;
+    text-align: center;
+    background-color: #F5C800;
+    box-shadow: 0 4px 10px #0000001A;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    margin-left: 20px;
+}

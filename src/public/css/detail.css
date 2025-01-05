@@ -28,20 +28,24 @@
     align-items: flex-start;
 }
 
-.detail__image-area {
+.form__image-area {
     width: 374px;
 }
 
-.detail__img {
+.form__image {
     width: 100%;
     margin-bottom: 10px;
 }
 
-.detail__img-text {
+.form__image-title {
     font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.detail__img-label {
+.form__image-label {
     background-color: #E0DFDE;
     border: 1px solid #4B4B4B;
     border-radius: 3px;
@@ -50,11 +54,12 @@
     cursor: pointer;
     margin-right: 10px;
 }
-.detail__img-input{
+
+.form__image-input {
     display: none;
 }
 
-.detail__img-title {
+.form__image-name {
     color: #888888;
 }
 
