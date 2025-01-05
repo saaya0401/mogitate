@@ -93,9 +93,10 @@
     font-size: 14px;
 }
 
-.detail-item__error {
+.item__error {
     color: #FD0707;
     font-size: 14px;
+    padding-top: 10px;
 }
 
 .checkbox__label {
