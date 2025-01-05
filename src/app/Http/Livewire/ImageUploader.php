@@ -34,6 +34,7 @@ class ImageUploader extends Component
         $this->imagePath='fruits-img/' . $this->imageName;
         $this->imageUrl = asset('storage/' . $this->imagePath);
         $this->emit('imageUploaded', 'fruits-img/' . $this->imageName);
+       
     }
     public function render()
     {

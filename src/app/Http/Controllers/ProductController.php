@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Season;
+use App\Http\Requests\ProductRequest;
 
 
 class ProductController extends Controller
@@ -28,7 +29,7 @@ class ProductController extends Controller
         $seasons=Season::all();
         return view('register', compact('seasons'));
     }
-    public function register(Request $request){
+    public function register(ProductRequest $request){
         $productData=$request->only(['name', 'price', 'image', 'description']);
         $product=Product::create($productData);
         $product->seasons()->attach($request->seasons);
