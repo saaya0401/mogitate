@@ -35,4 +35,19 @@ class ProductController extends Controller
         $product->seasons()->attach($request->seasons);
         return redirect('/products');
     }
+    public function update(ProductRequest $request, $productId){
+        $product=Product::find($productId);
+        $imagePath = $request->has('image') ? $request->image : $product->image;
+        $product->name=$request->name;
+        $product->price=$request->price;
+        $product->description=$request->description;
+        $product->image = $imagePath;
+        $product->save();
+        $product->seasons()->sync($request->seasons);
+        return redirect('/products');
+    }
+    public function destroy($productId){
+        $product=Product::find($productId)->delete();
+        return redirect('/products');
+    }
 }

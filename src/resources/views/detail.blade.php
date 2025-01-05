@@ -19,19 +19,23 @@
                     <div class="detail__group-item">
                         <p class="detail-item__title">商品名</p>
                         <div class="detail-item__input-area">
-                            <input type="text" name="name"  class="detail-item__input" value="{{$product['name']}}">
+                            <input type="text" name="name"  class="detail-item__input" value="{{$product['name']}}" placeholder="商品名を入力">
                         </div>
-                        <div class="detail-item__error">
-
+                        <div class="item__error">
+                            @error('name')
+                            {{$message}}
+                            @enderror
                         </div>
                     </div>
                     <div class="detail__group-item">
                         <p class="detail-item__title">値段</p>
                         <div class="detail-item__input-area">
-                            <input type="text" name="price"  class="detail-item__input" value="{{$product['price']}}">
+                            <input type="text" name="price"  class="detail-item__input" value="{{$product['price']}}" placeholder="値段を入力">
                         </div>
-                        <div class="detail-item__error">
-                        
+                        <div class="item__error">
+                            @error('price')
+                            {{$message}}
+                            @enderror
                         </div>
                     </div>
                     <div class="detail__group-item">
@@ -41,8 +45,10 @@
                             <label class="checkbox__label"><input type="checkbox" name="seasons[]" class="detail-item__checkbox" value="{{$season['id']}}" {{in_array($season['id'], $selectedSeasons) ? 'checked' : ''}} >{{$season['name']}}</label>
                             @endforeach
                         </div>
-                        <div class="detail-item__error">
-                        
+                        <div class="item__error">
+                            @error('seasons')
+                            {{$message}}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -50,10 +56,12 @@
             <div class="detail__description">
                 <p class="detail-item__title">商品説明</p>
                 <div class="detail-item__description-area">
-                    <textarea name="description" value="{{$product['description']}}" class="detail-item__description-textarea">{{$product['description']}}</textarea>
+                    <textarea name="description" value="{{$product['description']}}" class="detail-item__description-textarea" placeholder="商品の説明を入力">{{$product['description']}}</textarea>
                 </div>
-                <div class="detail-item__error">
-                        
+                <div class="item__error">
+                    @error('description')
+                    {{$message}}
+                    @enderror
                 </div>
             </div>
             <div class="detail__action-button">

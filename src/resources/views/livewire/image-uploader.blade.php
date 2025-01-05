@@ -12,5 +12,10 @@
             @endif
         </div>
     </div>
+    <div class="item__error">
+        @error('image')
+        {{$message}}
+        @enderror
+    </div>
     <input type="hidden" name="image" value="{{$imagePath}}">
 </div>
