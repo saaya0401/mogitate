@@ -33,6 +33,12 @@
     border-radius: 3px;
 }
 
+.register-form__item--select {
+    padding: 5px;
+    color: #FD0707;
+    font-size: 12px;
+}
+
 .register-form__item {
     margin-bottom: 25px;
 }
@@ -120,6 +126,7 @@
 .register-form__error {
     color: #FD0707;
     font-size: 14px;
+    padding-top: 10px;
 }
 
 .register-form__item--textarea {
