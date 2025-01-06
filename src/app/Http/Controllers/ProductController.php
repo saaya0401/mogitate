@@ -16,8 +16,17 @@ class ProductController extends Controller
         return view('index', compact('products'));
     }
     public function search(Request $request){
-        $products=Product::with('seasons')->KeywordSearch($request->keyword)->Paginate(6);
-        return view('index', compact('products'));
+        $query=Product::with('seasons');
+        if($request->has('keyword')){
+            $query->KeywordSearch($request->keyword);
+        }
+        if($request->has('sort')){
+            $direction=$request->sort==='high' ? 'desc' :'asc';
+            $query->sortbyPrice($direction);
+        }
+        $products=$query->paginate(6);
+        $products->appends($request->query());
+        return view('index', ['products'=>$products, 'keyword'=>$request->keyword, 'sort'=>$request->sort]);
     }
     public function detail($productId){
         $product=Product::find($productId);
@@ -49,5 +58,17 @@ class ProductController extends Controller
     public function destroy($productId){
         $product=Product::find($productId)->delete();
         return redirect('/products');
+    }
+    public function sort(Request $request){
+        $query=Product::query();
+        if($request->has('search')){
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+        if($request->has('sort')){
+            $direction=$request->sort==='high' ? 'desc' :'asc';
+            $query->sortbyPrice($direction);
+        }
+        $products=$query->get();
+        return view('index', compact('products'));
     }
 }

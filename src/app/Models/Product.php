@@ -17,4 +17,7 @@ class Product extends Model
             $query->where('name', 'like', '%' . $keyword . '%');
         }
     }
+    public function scopeSortByPrice($query, $direction='asc'){
+        return $query->orderBy('price', $direction);
+    }
 }

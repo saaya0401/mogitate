@@ -59,7 +59,7 @@
 .search__form--button {
     width: 240px;
     height: 44px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .search__form--button-submit {
@@ -76,6 +76,7 @@
 
 .search__form--sort {
     width: 240px;
+    border-bottom: 1px solid #E0DFDE;
 }
 
 .search__form--sort-title {
@@ -100,7 +101,7 @@
     transform: translate(0, -50%);
 }
 
-.sort__select {
+.sort__default {
     width: 100%;
     border: 2px solid #E0DFDE;
     border-radius: 3px;
@@ -110,7 +111,61 @@
     cursor: pointer;
 }
 
+.sort__selected {
+    width: 100%;
+    border: 2px solid #E0DFDE;
+    border-radius: 3px;
+    padding: 10px;
+    color: #4B4B4B;
+    appearance: none;
+    cursor: pointer;
+}
+.sort-tag {
+    border: 1px solid #F5C800;
+    padding: 10px;
+    border-radius: 30px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
 
+.sort-tag__inner {
+    color: #4B4B4B;
+    font-size: 14px;
+}
+
+.sort-tag__delete {
+    text-decoration: none;
+    border: 1px solid #F5C800;
+    padding: 5px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+}
+.sort-tag__delete::before,
+.sort-tag__delete::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: #F5C800;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.sort-tag__delete::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sort-tag__delete::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
 .products-list__grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
