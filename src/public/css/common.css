@@ -5,15 +5,15 @@
         url('/fonts/jsMath-cmti10.ttf.svg') format('svg'),
         url('/fonts/jsMath-cmti10.ttf.eot?#iefix') format('embedded-opentype');
 }
-
 *{
     box-sizing: border-box;
+    font-family: 'Inika';
 }
 body {
     background-color: #F8F8F8;
 }
 .header__logo {
-    font-family: 'jsMathCmti10', sans-serif;
+    font-family: 'jsMathCmti10';
     text-decoration: none;
     font-size: 30px;
     color: #F5C800;

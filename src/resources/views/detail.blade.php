@@ -42,7 +42,10 @@
                         <p class="detail-item__title">季節</p>
                         <div class="detail-item__input-area">
                             @foreach($seasons as $season)
-                            <label class="checkbox__label"><input type="checkbox" name="seasons[]" class="detail-item__checkbox" value="{{$season['id']}}" {{in_array($season['id'], $selectedSeasons) ? 'checked' : ''}} >{{$season['name']}}</label>
+                            <label class="checkbox__label">
+                                <input type="checkbox" name="seasons[]" class="detail-item__checkbox" value="{{$season['id']}}" {{in_array($season['id'], $selectedSeasons) ? 'checked' : ''}} >
+                                {{$season['name']}}
+                            </label>
                             @endforeach
                         </div>
                         <div class="item__error">
@@ -56,7 +59,7 @@
             <div class="detail__description">
                 <p class="detail-item__title">商品説明</p>
                 <div class="detail-item__description-area">
-                    <textarea name="description" value="{{$product['description']}}" class="detail-item__description-textarea" placeholder="商品の説明を入力">{{$product['description']}}</textarea>
+                    <textarea name="description" class="detail-item__description-textarea" placeholder="商品の説明を入力">{{$product['description']}}</textarea>
                 </div>
                 <div class="item__error">
                     @error('description')
