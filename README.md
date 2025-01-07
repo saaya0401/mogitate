@@ -12,12 +12,7 @@
 1. composer install
 1. composer require livewire/livewire
 1. cp .env.example .env
-1. .envファイルの以下のコードを変更
-DB_HOST=mysql
-DB_DATABASE=laravel_db
-DB_USERNAME=laravel_user
-DB_PASSWORD=laravel_pass
-
+1. docker-compose.ymlに記載しているように.envの環境変数を変更
 1. php artisan storage:link
 1. php artisan key:generate
 1. php artisan migrate
