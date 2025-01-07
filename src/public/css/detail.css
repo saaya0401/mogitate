@@ -6,37 +6,30 @@
     margin: 70px auto;
     position: relative;
 }
-
 .detail-title__link {
     color: #649FCA;
     text-decoration: none;
 }
-
 .detail-title {
     font-size: 14px;
     margin-bottom: 10px;
 }
-
 .detail-title__name {
     color: #333333;
     padding-left: 5px;
 }
-
 .detail-group__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-
 .form__image-area {
     width: 374px;
 }
-
 .form__image {
     width: 100%;
     margin-bottom: 10px;
 }
-
 .form__image-title {
     font-size: 14px;
     display: flex;
@@ -44,7 +37,6 @@
     align-items: center;
     margin-top: 10px;
 }
-
 .form__image-label {
     background-color: #E0DFDE;
     border: 1px solid #4B4B4B;
@@ -54,35 +46,28 @@
     cursor: pointer;
     margin-right: 10px;
 }
-
 .form__image-input {
     display: none;
 }
-
 .form__image-name {
     color: #888888;
 }
-
 .detail-item__title {
     color: #4B4B4B;
     font-size: 16px;
     margin-bottom: 10px;
 }
-
 .detail__group-item {
     margin-bottom: 10px;
 }
-
 .detail__group {
     width: 396px;
 }
-
 .detail-item__input-area {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-
 .detail-item__input {
     width: 100%;
     padding: 10px;
@@ -92,13 +77,17 @@
     color: #4B4B4B;
     font-size: 14px;
 }
-
+.detail-item__input::placeholder {
+    color: #E0DFDE;
+}
+.detail-item__description-textarea::placeholder {
+    color: #E0DFDE;
+}
 .item__error {
     color: #FD0707;
     font-size: 14px;
     padding-top: 10px;
 }
-
 .checkbox__label {
     margin-right: 50px;
     padding: 5px 0;
@@ -109,7 +98,6 @@
     justify-content: center;
     position: relative;
 }
-
 .detail-item__checkbox {
     margin-right: 5px;
     appearance: none;
@@ -126,7 +114,6 @@
     background-size: 80%;
     background-color:#4B4B4B ;
 }
-
 .detail-item__description-textarea {
     border: 1px solid #E0DFDE;
     border-radius: 3px;
@@ -138,7 +125,6 @@
     font-size: 14px;
     line-height: 21px;
 }
-
 .detail__action-button {
     display: flex;
     justify-content: center;
@@ -146,7 +132,6 @@
     align-items: center;
     height: 50px;
 }
-
 .detail__back {
     text-decoration: none;
     display: inline-block;
@@ -162,7 +147,6 @@
     border: none;
     border-radius: 3px;
 }
-
 .detail__edit {
     background-color: #F5C800;
     font-size: 16px;
@@ -175,14 +159,12 @@
     color: #4B4B4B;
     font-weight: 600;
 }
-
 .detail-delete__form{
     position: absolute;
     right: 0;
     top: 100%;
     transform: translateY(-50px);
 }
-
 .detail-delete__button {
     border: none;
     background: none;
@@ -190,7 +172,6 @@
     height: 50px;
     cursor: pointer;
 }
-
 .detail-delete__icon {
     width: 32px;
     height: 32px;
